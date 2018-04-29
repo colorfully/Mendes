@@ -87,6 +87,6 @@ class MyWeChat extends Wechat
         $this->responseText('我怀疑你是新司机');
     }
 }
-$wechat = new MyWeChat('weixin', TRUE);  // 调试模式, 输出错误信息
+$wechat = new MyWeChat('zzs123456', TRUE);  // 调试模式, 输出错误信息
 //$wechat = new MyWeChat('weixin');
 $wechat->run();
