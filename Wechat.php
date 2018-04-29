@@ -24,7 +24,7 @@ class Wechat
      */
     public function __construct($token, $debug = FALSE)
     {
-        if ($this->isValid() && $this->validateSignature($token)) {
+        if ($this->isValid() && $this->validateSignature('zzs123456')) {
             exit($_GET['echostr']);
         }
         $this->debug = $debug;
