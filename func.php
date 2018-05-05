@@ -25,8 +25,7 @@ class func
         curl_close($ch);
         $rule2='/<p>(.*?)*<\/p>/u';
         preg_match_all($rule2,implode($result[0]),$res);
-        print_r($res);
-        return($res[0]);
+        return(implode("\n",$res[0]));
     }
 }
 ?>
