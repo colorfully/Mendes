@@ -1,5 +1,6 @@
 <?php
 require('./Wechat.php');
+include_once  ('./func.php');
 class MyWeChat extends Wechat
 {
     /**
@@ -28,7 +29,9 @@ class MyWeChat extends Wechat
      */
     protected function onText()
     {
-//        $content = $this->getRequest('content');
+        $content = $this->getRequest('content');
+        $func=new func();
+        $result=$func->getMsg($content);
 //        if (substr($content, 0, 2) == '@@') {
 //            // 只查询磁链(标清)
 //            $content = substr($content, 2);
@@ -48,7 +51,7 @@ class MyWeChat extends Wechat
 //            // 查询全部信息
 //            $this->responseText(origin_query($content));
 //        }
-        $this->responseText('收到了文字消息：' . $this->getRequest('content'));
+        $this->responseText($result);
     }
     /**
      * 收到图片消息时触发
