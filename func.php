@@ -15,7 +15,6 @@ class func
             'Aquarius'=>'水瓶座',
             'Pisces'=>'双鱼座'
             ];
-$content='白羊座';
         $a=array_flip($arr);
         $ch=curl_init();
         curl_setopt($ch,CURLOPT_URL,"http://astro.sina.com.cn/fate_day_".$a[$content]."/");
